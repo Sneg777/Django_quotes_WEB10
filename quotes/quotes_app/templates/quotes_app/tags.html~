@@ -1,0 +1,12 @@
+{% extends "quotes_app/base.html" %}
+
+{% block content %}
+<h2>Tags</h2>
+
+{% for tag in tags %}
+<a href="{% url 'tag' tag.pk %}"
+    class="badge bg-secondary text-decoration-none me-1">
+    {{ tag.name }}
+</a>
+{% endfor %}
+{% endblock %}
